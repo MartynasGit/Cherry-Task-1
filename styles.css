@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,7 @@
   --secondary: black;
   --checkboxWith: 9rem;
   --checkboxHeight: 5rem;
-  --circleSize: calc(var(--checkboxHeight) * 0.75)
+  --circleSize: calc(var(--checkboxHeight) * 0.75);
 }
 
 body {
@@ -35,7 +36,7 @@ input[type="checkbox"] {
   height: var(--checkboxHeight);
   outline: none;
   border: none;
-  border-radius: 2rem;
+  border-radius: 5rem;
 }
 input:checked[type="checkbox"] {
   background-color: #83868a;
@@ -54,5 +55,13 @@ input[type="checkbox"]::before {
 input:checked[type="checkbox"]::before {
   left: calc(var(--checkboxWith) - 0.5rem - var(--circleSize));
 }
-
-
+.checkboxText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin-left: 15px;
+}
+.checkboxDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

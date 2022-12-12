@@ -6,6 +6,9 @@
 :root {
   --primary: white;
   --secondary: black;
+  --checkboxWith: 9rem;
+  --checkboxHeight: 5rem;
+  --circleSize: calc(var(--checkboxHeight) * 0.75)
 }
 
 body {
@@ -21,3 +24,35 @@ body {
   --primary: black;
   --secondary: white;
 }
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  background-color: #007bff;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: var(--checkboxWith);
+  height: var(--checkboxHeight);
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+}
+input:checked[type="checkbox"] {
+  background-color: #83868a;
+}
+input[type="checkbox"]::before {
+  content: " ";
+  position: absolute;
+  width: var(--circleSize);
+  height: var(--circleSize);
+  background-color: white;
+  border-radius: 5rem;
+  top: calc(var(--checkboxHeight) * 0.13);
+  left: 0.5rem;
+  transition: 0.2s;
+}
+input:checked[type="checkbox"]::before {
+  left: calc(var(--checkboxWith) - 0.5rem - var(--circleSize));
+}
+
+

@@ -1,0 +1,14 @@
+:root {
+  --primary: white;
+  --secondary: black;
+}
+
+body {
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.dark {
+  --primary:  black;
+  --secondary: white;
+}
